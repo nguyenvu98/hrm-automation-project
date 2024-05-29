@@ -6,19 +6,9 @@
     <classes>
       <class name="com.hrm.pim.PIM_01_Employee">
         <methods>
-          <include name="Employee_10_Qualification"/>
-          <include name="Employee_06_Immagration"/>
           <include name="afterClass"/>
-          <include name="Employee_04_Emergency_Contact"/>
-          <include name="Employee_07_Job"/>
-          <include name="Employee_03_Contact_Details"/>
-          <include name="Employee_01_Add_New"/>
-          <include name="Employee_09_Report_To"/>
-          <include name="Employee_08_Salary"/>
+          <include name="Employee_01_Add_New" invocation-numbers="0"/>
           <include name="beforeClass"/>
-          <include name="Employee_02_Personal_Details"/>
-          <include name="Employee_11_Membership"/>
-          <include name="Employee_05_Dependents"/>
         </methods>
       </class> <!-- com.hrm.pim.PIM_01_Employee -->
     </classes>
@@ -28,19 +18,9 @@
     <classes>
       <class name="com.hrm.pim.PIM_01_Employee">
         <methods>
-          <include name="Employee_10_Qualification"/>
-          <include name="Employee_06_Immagration"/>
           <include name="afterClass"/>
-          <include name="Employee_04_Emergency_Contact"/>
-          <include name="Employee_07_Job"/>
-          <include name="Employee_03_Contact_Details"/>
-          <include name="Employee_01_Add_New"/>
-          <include name="Employee_09_Report_To"/>
-          <include name="Employee_08_Salary"/>
+          <include name="Employee_01_Add_New" invocation-numbers="0"/>
           <include name="beforeClass"/>
-          <include name="Employee_02_Personal_Details"/>
-          <include name="Employee_05_Dependents"/>
-          <include name="Employee_11_Membership"/>
         </methods>
       </class> <!-- com.hrm.pim.PIM_01_Employee -->
     </classes>

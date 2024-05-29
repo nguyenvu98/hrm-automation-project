@@ -17,8 +17,8 @@ public class LoginPO extends BaseActions {
 		sendkeyToElement(driver, LoginUI.USERNAME_INPUT, value);
 	}
 	public void sendkeyToPasswordInput(String value) {
-		waitForElementVisible(driver,LoginUI.USERNAME_INPUT);
-		sendkeyToElement(driver, LoginUI.USERNAME_INPUT, value);		
+		waitForElementVisible(driver,LoginUI.PASSWORD_INPUT);
+		sendkeyToElement(driver, LoginUI.PASSWORD_INPUT, value);		
 	}
 	public void clickToLoginButton() {
 		waitForElementClickable(driver, LoginUI.SUBMIT_BUTTON);
