@@ -4,8 +4,6 @@ import org.openqa.selenium.WebDriver;
 
 public class DashboardUI {
 
-	WebDriver driver;
-	public DashboardUI(WebDriver driver) {
-		this.driver = driver;
-	}
+	public static final String PIM_MODULE = "xpath=//ul[@class='oxd-main-menu']//span[text()='PIM']";
+	
 }

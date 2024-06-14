@@ -4,7 +4,7 @@ import java.util.Random;
 
 import org.openqa.selenium.WebDriver;
 
-public class BaseActions extends BasePage {
+public class BaseActions extends BasePageFactory {
 	WebDriver driver;
 	public BaseActions(WebDriver driver) {
 		this.driver = driver;

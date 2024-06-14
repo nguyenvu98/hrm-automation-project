@@ -22,12 +22,24 @@ import org.openqa.selenium.firefox.FirefoxProfile;
 import org.testng.Assert;
 import org.testng.Reporter;
 
-
 public class BaseTest {
-//	protected final Logger log = LogManager.getLogger(getClass());
 	private WebDriver driverBaseTest;
 
 	protected WebDriver getBrowserDriver(String browserName) {
+		if(browserName.equals("firefox")) {
+			driverBaseTest = new FirefoxDriver();
+		}else if (browserName.equals("chrome")) {
+			driverBaseTest = new ChromeDriver();
+		}else {
+			driverBaseTest = new EdgeDriver();
+		}
+		driverBaseTest.manage().timeouts().implicitlyWait(Duration.ofSeconds(30));
+		driverBaseTest.manage().window().maximize();
+		driverBaseTest.get(GlobalConstants.USER_PAGE_URL);
+		return driverBaseTest;
+	}
+	
+	protected WebDriver getBrowserDriverAtAdmin(String browserName) {
 		if(browserName.equals("firefox")) {
 			driverBaseTest = new FirefoxDriver();
 		}else if (browserName.equals("chrome")) {
@@ -83,8 +95,9 @@ public class BaseTest {
 		return random.nextInt(9999);
 	}
 
-	protected Object getDriver() {
+	public Object getDriver() {
 		return null;
 	}
+
 
 }

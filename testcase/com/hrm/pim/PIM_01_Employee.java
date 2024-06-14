@@ -3,6 +3,7 @@ package com.hrm.pim;
 import java.lang.reflect.Method;
 
 import org.openqa.selenium.WebDriver;
+import org.testng.Assert;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
@@ -10,16 +11,26 @@ import org.testng.annotations.Test;
 
 import commons.BaseTest;
 import commons.DataContants;
+import pageObject.AddEmployeePO;
 import pageObject.DashboardPO;
+import pageObject.EmployeeListPO;
 import pageObject.LoginPO;
 import pageObject.PageGeneratorManager;
+import pageObject.PersonalDetailPO;
+import pageUIs.AddEmployeeUI;
 import pageUIs.BasePageUI;
+import reportConfig.ExtentManager;
 
 public class PIM_01_Employee extends BaseTest{
 	
 	private WebDriver driver;
 	LoginPO loginPage;
 	DashboardPO dashboardPage;
+	EmployeeListPO employeeListPage;
+	AddEmployeePO addEmployeePage;
+	PersonalDetailPO personalDetailPage;
+	
+	String employeeID;
 	
 	@Parameters("browser")
 	@BeforeClass
@@ -32,18 +43,37 @@ public class PIM_01_Employee extends BaseTest{
 		loginPage.clickToLoginButton();
 		
 		dashboardPage = PageGeneratorManager.getDashboardPage(driver);
+		dashboardPage.clickToPIMModule();
+		
+		employeeListPage = PageGeneratorManager.getEmployeeListPage(driver);
+
 	}
 	
-	@Test
-	public void Employee_01_Add_New(Method method) {
-		dashboardPage.clickToDynamicLink("PIM");
-	}
-//
 //	@Test
-//	public void Employee_02_Personal_Details() {
-//		
-//	}
-//
+	public void Employee_01_Add_New(Method method) {
+		employeeListPage.clickToAddButton();
+		addEmployeePage = PageGeneratorManager.getAddEmployeePage(driver);
+
+		addEmployeePage.sendkeyToFirstNameInput(DataContants.FIRSTNAME);
+		
+		addEmployeePage.sendkeyToLastNameInput(DataContants.LASTNAME);
+
+		employeeID = addEmployeePage.getEmployeeID();
+		
+		addEmployeePage.clickToSaveButton();
+		
+		Assert.assertTrue(addEmployeePage.isSaveSuccessfullyDisplay("Successfully Saved"));
+				
+//		verifyEquals(personalDetailPage.getFirstName(), DataContants.FIRSTNAME);		
+//		verifyEquals(personalDetailPage.getLastName(), DataContants.LASTNAME);
+//		verifyEquals(personalDetailPage.getEmployeeID(), employeeID);
+	}
+
+	@Test
+	public void Employee_02_Personal_Details() {
+		
+	}
+
 //	@Test
 //	public void Employee_03_Contact_Details() {
 //		
@@ -89,7 +119,7 @@ public class PIM_01_Employee extends BaseTest{
 //		
 //	}
 
-	@AfterClass
+	@AfterClass(alwaysRun = true)
 	public void afterClass() {
 		driver.quit();
 	}

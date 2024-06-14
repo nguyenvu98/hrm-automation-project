@@ -1,6 +1,6 @@
 package reportConfig;
 
-import static reportConfig.ExtentTestManager.getTest;
+import java.io.IOException;
 
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
@@ -9,51 +9,60 @@ import org.testng.ITestContext;
 import org.testng.ITestListener;
 import org.testng.ITestResult;
 
+import com.aventstack.extentreports.ExtentReports;
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.MediaEntityBuilder;
 import com.aventstack.extentreports.Status;
-import com.aventstack.extentreports.markuputils.ExtentColor;
-import com.aventstack.extentreports.markuputils.MarkupHelper;
 
 import commons.BaseTest;
 
 public class ExtentTestListener extends BaseTest implements ITestListener {
+	private static ExtentReports extent = ExtentManager.createInstance();
+	private static ThreadLocal<ExtentTest> test = new ThreadLocal<ExtentTest>();
 
 	@Override
-	public void onStart(ITestContext iTestContext) {
-		iTestContext.setAttribute("WebDriver", this.getDriver());
+	public synchronized void onStart(ITestContext context) {
 	}
 
 	@Override
-	public void onFinish(ITestContext iTestContext) {
-		ExtentManager.extentReports.flush();
+	public synchronized void onFinish(ITestContext context) {
+		extent.flush();
 	}
 
 	@Override
-	public void onTestStart(ITestResult iTestResult) {
-
+	public synchronized void onTestStart(ITestResult result) {
+		ExtentTest extentTest = extent.createTest(result.getMethod().getMethodName(), result.getMethod().getDescription());
+		test.set(extentTest);
 	}
 
 	@Override
-	public void onTestSuccess(ITestResult iTestResult) {
-		getTest().log(Status.PASS, MarkupHelper.createLabel(iTestResult.getName() + " - Passed", ExtentColor.GREEN));
+	public synchronized void onTestSuccess(ITestResult result) {
+
+		test.get().pass("Test passed");
 	}
 
 	@Override
-	public void onTestFailure(ITestResult iTestResult) {
-		Object testClass = iTestResult.getInstance();
+	public synchronized void onTestFailure(ITestResult result) {
+		Object testClass = result.getInstance();
 		WebDriver driver = ((BaseTest) testClass).getDriver();
+		String base64Screenshot = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 
-		String base64Screenshot = "data:image/png;base64," + ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
-		getTest().log(Status.FAIL, "Screenshot and Exception", iTestResult.getThrowable(), getTest().addScreenCaptureFromBase64String(base64Screenshot).getModel().getMedia().get(0));
-		getTest().log(Status.FAIL, MarkupHelper.createLabel(iTestResult.getName() + " - Failed", ExtentColor.RED));
+		try {
+			test.get().fail(result.getThrowable());
+			test.get().log(Status.FAIL, "Test failed", MediaEntityBuilder.createScreenCaptureFromBase64String(base64Screenshot).build());
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+
 	}
 
 	@Override
-	public void onTestSkipped(ITestResult iTestResult) {
-		getTest().log(Status.SKIP, MarkupHelper.createLabel(iTestResult.getName() + " - Skipped", ExtentColor.ORANGE));
+	public synchronized void onTestSkipped(ITestResult result) {
+		test.get().skip(result.getThrowable());
 	}
 
 	@Override
-	public void onTestFailedButWithinSuccessPercentage(ITestResult iTestResult) {
-		getTest().log(Status.FAIL, MarkupHelper.createLabel(iTestResult.getName() + " - Failed with Percentage", ExtentColor.RED));
+	public void onTestFailedButWithinSuccessPercentage(ITestResult result) {
+
 	}
 }
