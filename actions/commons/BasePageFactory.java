@@ -159,7 +159,10 @@ public class BasePageFactory {
 		getElement(driver, element).click();
 	}
 
-	
+	public void clickToElementByJS(WebDriver driver, WebElement element, String value) {
+		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].click();", getElement(driver, element));
+	}
 	
 	public void sendkeyToElement(WebDriver driver, WebElement element, String keyToSend) {
 		element.clear();
@@ -209,11 +212,11 @@ public class BasePageFactory {
 	}
 	
 	public String getElementAttribute(WebDriver driver, WebElement element, String attributeName) {
-		return getElement(driver, element).getAttribute(attributeName);
+		return element.getAttribute(attributeName);
 	}
 	
 	public String getElementText(WebDriver driver, WebElement element) {
-		return getElement(driver, element).getText();
+		return element.getText();
 	}
 	
 	public int getElementSize(WebDriver driver,List<WebElement> element){
@@ -321,6 +324,7 @@ public class BasePageFactory {
 			return false;
 		}
 	}
+	
 	
 	protected void waitForElementVisible(WebDriver driver, WebElement element) {
 		WebDriverWait explicitWait = new WebDriverWait(driver, Timeout);

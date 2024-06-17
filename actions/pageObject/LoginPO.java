@@ -18,7 +18,7 @@ public class LoginPO extends BaseActions {
 	@FindBy(how = How.XPATH, using = "//input[@name='password']")
 	private WebElement passwordInput;
 	
-	@FindBy(how = How.XPATH, using = "//button[@name='submit']")
+	@FindBy(how = How.XPATH, using = "//button[@type='submit']")
 	private WebElement loginButton;
 	
 	WebDriver driver;

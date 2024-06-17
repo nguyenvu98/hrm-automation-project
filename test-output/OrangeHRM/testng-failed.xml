@@ -1,26 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite thread-count="3" name="Failed suite [OrangeHRM]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" name="Run on Firefox(failed)">
-    <parameter name="browser" value="firefox"/>
-    <classes>
-      <class name="com.hrm.pim.PIM_01_Employee">
-        <methods>
-          <include name="afterClass"/>
-          <include name="beforeClass"/>
-          <include name="Employee_02_Personal_Details"/>
-        </methods>
-      </class> <!-- com.hrm.pim.PIM_01_Employee -->
-    </classes>
-  </test> <!-- Run on Firefox(failed) -->
   <test thread-count="3" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
       <class name="com.hrm.pim.PIM_01_Employee">
         <methods>
           <include name="afterClass"/>
+          <include name="Employee_01_Add_New" invocation-numbers="0"/>
           <include name="beforeClass"/>
-          <include name="Employee_02_Personal_Details"/>
+          <include name="Employee_02_Personal_Details" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.hrm.pim.PIM_01_Employee -->
     </classes>
@@ -31,8 +20,8 @@
       <class name="com.hrm.pim.PIM_01_Employee">
         <methods>
           <include name="afterClass"/>
+          <include name="Employee_01_Add_New" invocation-numbers="0"/>
           <include name="beforeClass"/>
-          <include name="Employee_02_Personal_Details"/>
         </methods>
       </class> <!-- com.hrm.pim.PIM_01_Employee -->
     </classes>

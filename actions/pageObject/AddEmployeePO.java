@@ -3,6 +3,7 @@ package pageObject;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.FindBys;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
 import org.testng.Assert;
@@ -21,6 +22,18 @@ public class AddEmployeePO extends BaseActions {
 	@FindBy(how = How.XPATH, using = "//button[text()=' Save ']")
 	private WebElement saveButton;
 	
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'oxd-grid-2')]/div/div/div[2]/input")
+	private WebElement employeeID;
+	
+	@FindBy(how = How.XPATH, using = "//div[contains(@class,'oxd-grid-2')]/div/div/div[2]/input")
+	private WebElement successfullyMessage;
+	
+	@FindBys({
+		@FindBy(how = How.XPATH, using = "//form[@class='oxd-form']/div/div"),
+		@FindBy(how = How.XPATH, using = "//form[@class='oxd-form']/div/div/div")
+	})
+	private WebElement loadingSpinner;
+	
 	WebDriver driver;
 	public AddEmployeePO(WebDriver driver) {
 		super(driver);
@@ -34,62 +47,47 @@ public class AddEmployeePO extends BaseActions {
 		sendkeyToElement(driver, firstnameInput, value);
 	}
 	
-	
-	public void sendkeyToMiddleNameInput(String value) {
-	
-	}
 	public void sendkeyToLastNameInput(String value) {
-		
-	}		
+		waitForElementVisible(driver, lastnameInput);
+		sendkeyToElement(driver, lastnameInput, value);
+	}
 	
-	public PersonalDetailPO clickToSaveButton() {
-		return null;
+	public void sendkeyToEmpIDInput(String value) {
+		waitForElementVisible(driver, employeeID);
+		sendkeyToElement(driver, employeeID, value);
+	}	
 	
+	public void clickToSaveButton() {
+		waitForElementClickable(driver, saveButton);
+		clickToElement(driver, saveButton);	
 	}
 	
 	public boolean isSaveSuccessfullyDisplay(String message) {
-		return false;
+		waitForElementVisible(driver, successfullyMessage);
+		return isElementDisplayed(driver, successfullyMessage);
 	}
-	
-//	public PersonalDetailPO clickToSaveButton() {
-//		waitForElementClickable(driver,AddEmployeeUI.SAVE_BUTTON);
-//		clickToElement(driver, AddEmployeeUI.SAVE_BUTTON);
-//		return PageGeneratorManager.getPersonalDetailPage(driver);
-//	}
-//	public boolean isSaveSuccessfullyDisplay(String message) {
-//		waitForElementVisible(driver, AddEmployeeUI.DYNAMIC_SUCCESS_MESSAGE,message);
-//		return isElementDisplayed(driver, AddEmployeeUI.DYNAMIC_SUCCESS_MESSAGE,message);
-//	}
-
-	
-//	public void sendkeyToFirstNameInput(String value) {
-//		waitForElementVisible(driver, AddEmployeeUI.FIRSTNAME_INPUT);
-//		sendkeyToElement(driver, AddEmployeeUI.FIRSTNAME_INPUT, value);
-//	}
-//	public void sendkeyToMiddleNameInput(String value) {
-//		waitForElementVisible(driver, AddEmployeeUI.MIDNAME_INPUT);
-//		sendkeyToElement(driver, AddEmployeeUI.MIDNAME_INPUT, value);		
-//	}
-//	public void sendkeyToLastNameInput(String value) {
-//		waitForElementVisible(driver, AddEmployeeUI.LASTNAME_INPUT);
-//		sendkeyToElement(driver, AddEmployeeUI.LASTNAME_INPUT, value);		
-//	}		
-//	
-//	public PersonalDetailPO clickToSaveButton() {
-//		waitForElementClickable(driver,AddEmployeeUI.SAVE_BUTTON);
-//		clickToElement(driver, AddEmployeeUI.SAVE_BUTTON);
-//		return PageGeneratorManager.getPersonalDetailPage(driver);
-//	}
-//	public boolean isSaveSuccessfullyDisplay(String message) {
-//		waitForElementVisible(driver, AddEmployeeUI.DYNAMIC_SUCCESS_MESSAGE,message);
-//		return isElementDisplayed(driver, AddEmployeeUI.DYNAMIC_SUCCESS_MESSAGE,message);
-//	}
 
 	public String getEmployeeID() {
-		// TODO Auto-generated method stub
-		return null;
+		String empID = getElementAttribute(driver, employeeID, "value");
+		System.out.println(empID);
+		return empID;
+	}
+	public String getEmployeeFirstname() {
+		String firstname = getElementAttribute(driver, firstnameInput, "value");
+		return firstname;
+	}
+	
+	public String getEmployeeLastname() {
+		String lastname = getElementAttribute(driver, lastnameInput, "value");
+		return lastname;
 	}
 
+	public boolean waitForLoadingSpinnerInvisible() {
+		waitForElementInvisible(driver, loadingSpinner);
+		return !isElementDisplayed(driver, loadingSpinner);
+	}
 	
-
+	public void clearEmpField() {
+		employeeID.clear();
+	}
 }
