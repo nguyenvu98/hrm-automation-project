@@ -12,7 +12,9 @@ import org.testng.annotations.Test;
 import commons.BaseTest;
 import commons.DataContants;
 import pageObject.AddEmployeePO;
+import pageObject.ContactDetailPO;
 import pageObject.DashboardPO;
+import pageObject.EmergencyContactPO;
 import pageObject.EmployeeListPO;
 import pageObject.LoginPO;
 import pageObject.PageGeneratorManager;
@@ -29,8 +31,11 @@ public class PIM_01_Employee extends BaseTest{
 	EmployeeListPO employeeListPage;
 	AddEmployeePO addEmployeePage;
 	PersonalDetailPO personalDetailPage;
+	ContactDetailPO contactDetailPage;
+	EmergencyContactPO emergencyContactPage;
 	
 	String employeeID, employeeFirstname, employeeLastname;
+	String fileName = "cat meme.jpg";
 	
 	@Parameters("browser")
 	@BeforeClass
@@ -73,7 +78,7 @@ public class PIM_01_Employee extends BaseTest{
 		employeeListPage.sendkeyToEmpIDInput(employeeID);
 		employeeListPage.clickToSearchButton();
 		
-		System.out.println(employeeFirstname + employeeLastname);
+		System.out.println(employeeFirstname+ "" + employeeLastname);
 		Assert.assertEquals(employeeListPage.getFirstname(), employeeFirstname);
 		Assert.assertEquals(employeeListPage.getLastname(), employeeLastname);
 	}
@@ -87,42 +92,56 @@ public class PIM_01_Employee extends BaseTest{
 		personalDetailPage.selectNationality("American");
 		personalDetailPage.selectMaritalStatus("Single");	
 		personalDetailPage.selectDateOfBirthPicker(DataContants.RANDOM_BIRTHDAY);
-//		personalDetailPage.clickToMaleRadioButton();
 		personalDetailPage.clickToSaveButton();
+		
+		Assert.assertEquals(personalDetailPage.isSuccessMessageVisibled(), "Successfully Updated");
+	}
+
+	@Test
+	public void Employee_03_Contact_Details() {
+		personalDetailPage.clickToContactDetailLink();
+		
+		contactDetailPage = PageGeneratorManager.getContactDetailPage(driver);
+		contactDetailPage.sendkeyToStreet1Input(DataContants.STREET_1);
+		contactDetailPage.sendkeyToStreet2Input(DataContants.STREET_2);
+		contactDetailPage.sendkeyToCityInput(DataContants.CITY);
+		contactDetailPage.sendkeyToStateInput(DataContants.STATE);
+		contactDetailPage.sendkeyToZIPInput(DataContants.ZIP);
+		contactDetailPage.selectCountryDropdown("American");
+		contactDetailPage.sendkeyToHomeNumberInput(DataContants.HOME_BUMBER);
+		contactDetailPage.sendkeyToMobileNumberInput(DataContants.MOBILE_NUMBER);
+		contactDetailPage.sendkeyToWorkNumberInput(DataContants.WORK_NUMBER);
+		contactDetailPage.sendkeyToWorkEmailInput(DataContants.WORK_EMAIL);
+		contactDetailPage.sendkeyToOtherEmailInput(DataContants.ORTHER_EMAIL);
+		sleepInSecond(1);
+		contactDetailPage.clickToSaveButton();
+		Assert.assertEquals(contactDetailPage.isSuccessMessageVisibled(), "Successfully Updated");
+	}
+	
+	@Test
+	public void Employee_04_Emergency_Contact() {
+		contactDetailPage.clickToEmergencyContactLink();
+		emergencyContactPage = PageGeneratorManager.getEmergencyContactPO(driver);
+		emergencyContactPage.clickToAddButton();
+		emergencyContactPage.clickToBrowseButton(fileName);
+		sleepInSecond(4);
+		emergencyContactPage.clickToSaveButton();
+		sleepInSecond(2);
+		Assert.assertEquals(contactDetailPage.isSuccessMessageVisibled(), "Successfully Updated");		
 	}
 
 //	@Test
-//	public void Employee_03_Contact_Details() {
+//	public void Employee_05_Job() {
 //		
 //	}
 //	
 //	@Test
-//	public void Employee_04_Emergency_Contact() {
+//	public void Employee_06_Salary() {
 //		
 //	}
 //	
 //	@Test
-//	public void Employee_05_Dependents() {
-//		
-//	}
-//	
-//	@Test
-//	public void Employee_06_Immagration() {
-//		
-//	}
-//	
-//	@Test
-//	public void Employee_07_Job() {
-//		
-//	}
-//	
-//	@Test
-//	public void Employee_08_Salary() {
-//		
-//	}
-//	
-//	@Test
-//	public void Employee_09_Report_To() {
+//	public void Employee_07_Report_To() {
 //		
 //	}
 //	

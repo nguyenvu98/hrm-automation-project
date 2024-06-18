@@ -44,7 +44,10 @@ public class PersonalDetailPO extends BaseActions{
 	
 	@FindBy(how = How.XPATH, using = "//p[text()=' * Required']/following-sibling::button")
 	private WebElement saveButton;
-
+	
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Contact Details')]")
+	private WebElement contactDetailLink;
+	
 	WebDriver driver;	
 	public PersonalDetailPO(WebDriver driver) {
 		super(driver);
@@ -68,33 +71,12 @@ public class PersonalDetailPO extends BaseActions{
 	}
 
 	public void selectNationality(String value) {
-		waitForElementClickable(driver, nationalityDropdown);
-		nationalityDropdown.click();
-		sleepInSecond(2);
-		WebDriverWait explicitWait = new WebDriverWait(driver, Timeout);
-		List<WebElement> allItems = explicitWait.until(ExpectedConditions.visibilityOfAllElements(childNationalItem)); 
-		for (WebElement item : allItems) {
-			if (item.getText().trim().equals(value)) {
-				JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-				jsExecutor.executeScript("arguments[0].scrollIntoView(true)", item);
-				sleepInSecond(1);
-				item.click();
-				break;
-			}
-		}
+		selectInDropdownCustom(driver, nationalityDropdown, childNationalItem, value);
 	}
 
-
-	public void selectLienceExDate(String dateSelected) {
-		// TODO Auto-generated method stub
-		
-	}
-	
 	public void selectMaritalStatus(String value) {
-//		waitForElementClickable(driver, maritalDropdown);
-//		selectInDropdownDefault(driver, maritalDropdown, value);		
+		selectInDropdownCustom(driver, maritalDropdown, childMaritalItem, value);
 	}
-
 
 	public void selectLienceExDatePicker(String randomLienceExDay) {
 		waitForElementVisible(driver, licenseExpireDatePicker);
@@ -106,14 +88,15 @@ public class PersonalDetailPO extends BaseActions{
 		sendkeyToElement(driver, birthDatePicker, randombirthDay);		
 	}
 
-	public void clickToMaleRadioButton() {
-		// TODO Auto-generated method stub
-		
-	}
 
 	public void clickToSaveButton() {
 		waitForElementClickable(driver,saveButton);
 		clickToElement(driver,saveButton);		
+	}
+
+	public void clickToContactDetailLink() {
+		waitForElementClickable(driver, contactDetailLink);
+		clickToElement(driver,contactDetailLink);
 	}
 
 

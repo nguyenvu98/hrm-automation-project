@@ -21,7 +21,7 @@ public class EmployeeListPO extends BaseActions {
 	@FindBy(how = How.XPATH, using = "//label[text()=\"Employee Id\"]/parent::div/following-sibling::div/input")
 	private WebElement empIDInput;
 
-	@FindBy(how = How.XPATH, using = "//div[@class='oxd-form-actions']//button[@type='submit']")
+	@FindBy(how = How.XPATH, using = "//div[@class='oxd-form-actions']/button[@type='submit']")
 	private WebElement searchButton;
 	
 	@FindBy(how = How.XPATH, using = "//div[text()='First (& Middle) Name']/parent::div/parent::div/following-sibling::div//div[contains(@class,'oxd-table-cell')][3]/div")
@@ -63,6 +63,7 @@ public class EmployeeListPO extends BaseActions {
 		return getElementAttribute(driver,lastnameInput,"value");
 	}
 	public void clickToEditIcon() {
-		
+		waitForElementClickable(driver, editButton);
+		clickToElement(driver, editButton);
 	}	
 }

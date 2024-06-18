@@ -6,12 +6,12 @@
 	<!--<listener class-name="reportConfig.ExtentReportListener"></listener>
 		<listener class-name="commons.MethodListener"></listener>-->
 	</listeners>
-	<!--<test name="Run on Firefox" preserve-order="true">
+<!--	<test name="Run on Firefox" preserve-order="true">
 		<parameter name="browser" value="firefox"></parameter>
 		<classes>
 			<class name="com.hrm.pim.PIM_01_Employee" />
 		</classes>
-	</test> -->
+	</test>-->
 	<test name="Run on Chrome" preserve-order="true">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>

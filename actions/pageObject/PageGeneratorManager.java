@@ -23,4 +23,12 @@ public class PageGeneratorManager {
 	public static PersonalDetailPO getPersonalDetailPage(WebDriver driver) {
 		return new PersonalDetailPO(driver);
 	}
+	
+	public static ContactDetailPO getContactDetailPage(WebDriver driver) {
+		return new ContactDetailPO(driver);
+	}
+	
+	public static EmergencyContactPO getEmergencyContactPO(WebDriver driver) {
+		return new EmergencyContactPO(driver);
+	}
 }

@@ -14,6 +14,16 @@ public class DataContants {
 	public static final String EMP_ID = randomNumber();
 	public static final String RANDOM_BIRTHDAY = randomBirthDay();
 	public static final String RANDOM_LICENSE_EXPIRED_DAY = randomLicenseExpiredDay();
+	public static final String STREET_1 = "Le Duan";
+	public static final String STREET_2 = "Hoang Hoa Tham";
+	public static final String CITY = "San Francisco";
+	public static final String STATE = "007";
+	public static final String ZIP = "46987";
+	public static final String HOME_BUMBER = "0234567883";
+	public static final String MOBILE_NUMBER = "067576587";
+	public static final String WORK_NUMBER = "04354364690";
+	public static final String WORK_EMAIL = "abc@cba.com";
+	public static final String ORTHER_EMAIL = "orther@yahoo.com";
 
 
 	
@@ -31,7 +41,7 @@ public class DataContants {
 		return firstname[index];
 	}
 	
-	protected static String randomNumber() {
+	public static String randomNumber() {
 		String randomNumber = String.valueOf(ThreadLocalRandom.current().nextInt(1000, 10000));
 		return randomNumber;
 	}

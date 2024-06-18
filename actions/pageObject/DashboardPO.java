@@ -15,6 +15,8 @@ public class DashboardPO extends BaseActions {
 	@FindBy(how = How.XPATH, using = "//ul[@class='oxd-main-menu']//span[text()='PIM']")
 	private WebElement pimModul;
 	
+	
+	
 	WebDriver driver;
 	public DashboardPO(WebDriver driver) {
 		super(driver);

@@ -186,14 +186,14 @@ public class BasePageFactory {
 	}
 	
 	
-	public void selectInDropdownCustom(WebDriver driver, String parentXpath, String childXpath, String expectedText) {
-		getWebElement(driver, parentXpath).click();
-		sleepInSecond(1);
-		
+	public void selectInDropdownCustom(WebDriver driver, WebElement parentElement, List<WebElement> childElement,String value) {
+		waitForElementClickable(driver, parentElement);
+		parentElement.click();
+		sleepInSecond(2);
 		WebDriverWait explicitWait = new WebDriverWait(driver, Timeout);
-		List<WebElement> allItems = explicitWait.until(ExpectedConditions.presenceOfAllElementsLocatedBy(getByLocatorType(childXpath))); 
+		List<WebElement> allItems = explicitWait.until(ExpectedConditions.visibilityOfAllElements(childElement)); 
 		for (WebElement item : allItems) {
-			if (item.getText().trim().equals(expectedText)) {
+			if (item.getText().trim().equals(value)) {
 				JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
 				jsExecutor.executeScript("arguments[0].scrollIntoView(true)", item);
 				sleepInSecond(1);
@@ -217,6 +217,17 @@ public class BasePageFactory {
 	
 	public String getElementText(WebDriver driver, WebElement element) {
 		return element.getText();
+	}
+	
+	public List<String> getListElementText(WebDriver driver,List<WebElement> element) {
+		WebDriverWait explicitWait = new WebDriverWait(driver, Timeout);
+		List<WebElement> allItems = explicitWait.until(ExpectedConditions.visibilityOfAllElements(element)); 
+		   
+	    List<String> elementTexts = new ArrayList<>();
+	    for (WebElement item : allItems) {
+	        elementTexts.add(item.getText().trim());
+	    }
+	    return elementTexts;
 	}
 	
 	public int getElementSize(WebDriver driver,List<WebElement> element){
@@ -351,5 +362,18 @@ public class BasePageFactory {
 		String acctualResult = errMessage.getText();
 		return  acctualResult;
 	}
+	
+	
+	public void uploadMultipleFiles(WebDriver driver,WebElement element,String...fileNames) {
+		String filePath = GlobalConstants.UPLOAD_FILE;
+		String fullFileName = "";
+		for (String file : fileNames) {
+			fullFileName = fullFileName + filePath + file + "\n";
+		}
+		fullFileName = fullFileName.trim();
+		getElement(driver, element).sendKeys(fullFileName);
+	}
+	
+
 	
 }
