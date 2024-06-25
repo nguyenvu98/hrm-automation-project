@@ -16,9 +16,11 @@ import pageObject.ContactDetailPO;
 import pageObject.DashboardPO;
 import pageObject.EmergencyContactPO;
 import pageObject.EmployeeListPO;
+import pageObject.JobPO;
 import pageObject.LoginPO;
 import pageObject.PageGeneratorManager;
 import pageObject.PersonalDetailPO;
+import pageObject.SalaryPO;
 import pageUIs.AddEmployeeUI;
 import pageUIs.BasePageUI;
 import reportConfig.ExtentManager;
@@ -33,8 +35,11 @@ public class PIM_01_Employee extends BaseTest{
 	PersonalDetailPO personalDetailPage;
 	ContactDetailPO contactDetailPage;
 	EmergencyContactPO emergencyContactPage;
+	JobPO jobPage;
+	SalaryPO salaryPage;
 	
-	String employeeID, employeeFirstname, employeeLastname;
+	String employeeID;
+//	, employeeFirstname, employeeLastname;
 	String fileName = "cat meme.jpg";
 	
 	@Parameters("browser")
@@ -64,8 +69,8 @@ public class PIM_01_Employee extends BaseTest{
 		addEmployeePage.sendkeyToEmpIDInput(DataContants.EMP_ID);
 		
 		employeeID = addEmployeePage.getEmployeeID();
-		employeeFirstname = addEmployeePage.getEmployeeFirstname();
-		employeeLastname = addEmployeePage.getEmployeeLastname();
+		String employeeFirstname = addEmployeePage.getEmployeeFirstname();
+		String employeeLastname = addEmployeePage.getEmployeeLastname();
 		
 		addEmployeePage.clickToSaveButton();
 		sleepInSecond(3);
@@ -77,69 +82,103 @@ public class PIM_01_Employee extends BaseTest{
 		employeeListPage = PageGeneratorManager.getEmployeeListPage(driver);
 		employeeListPage.sendkeyToEmpIDInput(employeeID);
 		employeeListPage.clickToSearchButton();
-		
-		System.out.println(employeeFirstname+ "" + employeeLastname);
+		employeeListPage.clickToEditIcon();
+
+		System.out.println(employeeFirstname+ " " + employeeLastname);
 		Assert.assertEquals(employeeListPage.getFirstname(), employeeFirstname);
 		Assert.assertEquals(employeeListPage.getLastname(), employeeLastname);
+		
 	}
 
 	@Test
 	public void Employee_02_Personal_Details(Method method) {
-		employeeListPage.clickToEditIcon();
-		
 		personalDetailPage = PageGeneratorManager.getPersonalDetailPage(driver);
+		sleepInSecond(3);
 		personalDetailPage.selectLienceExDatePicker(DataContants.RANDOM_LICENSE_EXPIRED_DAY);
 		personalDetailPage.selectNationality("American");
 		personalDetailPage.selectMaritalStatus("Single");	
 		personalDetailPage.selectDateOfBirthPicker(DataContants.RANDOM_BIRTHDAY);
 		personalDetailPage.clickToSaveButton();
+		sleepInSecond(3);
 		
 		Assert.assertEquals(personalDetailPage.isSuccessMessageVisibled(), "Successfully Updated");
+		personalDetailPage.clickToContactDetailLink();
 	}
 
 	@Test
-	public void Employee_03_Contact_Details() {
-		personalDetailPage.clickToContactDetailLink();
-		
+	public void Employee_03_Contact_Details() {		
 		contactDetailPage = PageGeneratorManager.getContactDetailPage(driver);
+		sleepInSecond(5);
 		contactDetailPage.sendkeyToStreet1Input(DataContants.STREET_1);
 		contactDetailPage.sendkeyToStreet2Input(DataContants.STREET_2);
 		contactDetailPage.sendkeyToCityInput(DataContants.CITY);
 		contactDetailPage.sendkeyToStateInput(DataContants.STATE);
 		contactDetailPage.sendkeyToZIPInput(DataContants.ZIP);
-		contactDetailPage.selectCountryDropdown("American");
+		contactDetailPage.selectCountryDropdown("Angola");
 		contactDetailPage.sendkeyToHomeNumberInput(DataContants.HOME_BUMBER);
 		contactDetailPage.sendkeyToMobileNumberInput(DataContants.MOBILE_NUMBER);
 		contactDetailPage.sendkeyToWorkNumberInput(DataContants.WORK_NUMBER);
 		contactDetailPage.sendkeyToWorkEmailInput(DataContants.WORK_EMAIL);
 		contactDetailPage.sendkeyToOtherEmailInput(DataContants.ORTHER_EMAIL);
-		sleepInSecond(1);
+		sleepInSecond(5);
 		contactDetailPage.clickToSaveButton();
 		Assert.assertEquals(contactDetailPage.isSuccessMessageVisibled(), "Successfully Updated");
+		contactDetailPage.clickToEmergencyContactLink();
 	}
 	
 	@Test
 	public void Employee_04_Emergency_Contact() {
-		contactDetailPage.clickToEmergencyContactLink();
 		emergencyContactPage = PageGeneratorManager.getEmergencyContactPO(driver);
 		emergencyContactPage.clickToAddButton();
 		emergencyContactPage.clickToBrowseButton(fileName);
 		sleepInSecond(4);
 		emergencyContactPage.clickToSaveButton();
 		sleepInSecond(2);
+		
+		Assert.assertEquals(contactDetailPage.isSuccessMessageVisibled(), "Successfully Saved");		
+	}
+
+	@Test
+	public void Employee_05_Job() {
+		emergencyContactPage.clickToJobLink();
+		
+		jobPage = PageGeneratorManager.getJobPO(driver);
+		sleepInSecond(3);
+		jobPage.selectJobDropdown("Operatives");
+		jobPage.clickEnableIECD();
+		sleepInSecond(3);	
+		
+		jobPage.selectContractStartDatePicker(DataContants.RANDOM_BIRTHDAY);
+		jobPage.selectContractEndDatePicker(DataContants.RANDOM_LICENSE_EXPIRED_DAY);
+		jobPage.clickToBrowseButton(fileName);
+		jobPage.clickToSaveButton();
+		
+		Assert.assertEquals(contactDetailPage.isSuccessMessageVisibled(), "Successfully Updated");		
+		jobPage.clickToSalaryLink();
+
+	}
+	
+	@Test
+	public void Employee_06_Salary() {
+		salaryPage = PageGeneratorManager.getSalaryPO(driver);
+		salaryPage.clickToAddButton();
+		sleepInSecond(2);
+		
+		salaryPage.sendkeyToSalaryComponentInput(DataContants.randomNumber());
+		salaryPage.selectPayGradeDropdown("abc");
+		sleepInSecond(1);
+		salaryPage.selectPayFrequencyDropdown("Monthly");
+		salaryPage.sendkeyToAmountInput(DataContants.randomNumber());
+		salaryPage.clickEnableIDDD();
+		salaryPage.sendkeyToAccountNumberInput(DataContants.randomNumber());
+		salaryPage.selectPayGradeDropdown("Checking");
+		salaryPage.sendkeyToRountingNumberInput(DataContants.randomNumber());
+		salaryPage.sendkeyToAmountInput(DataContants.randomNumber());
+
+		salaryPage.clickToSaveButton();		
 		Assert.assertEquals(contactDetailPage.isSuccessMessageVisibled(), "Successfully Updated");		
 	}
 
-//	@Test
-//	public void Employee_05_Job() {
-//		
-//	}
-//	
-//	@Test
-//	public void Employee_06_Salary() {
-//		
-//	}
-//	
 //	@Test
 //	public void Employee_07_Report_To() {
 //		

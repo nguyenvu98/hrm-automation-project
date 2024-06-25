@@ -71,20 +71,22 @@ public class PersonalDetailPO extends BaseActions{
 	}
 
 	public void selectNationality(String value) {
-		selectInDropdownCustom(driver, nationalityDropdown, childNationalItem, value);
+		selectInDropdownCustom(driver, nationalityDropdown,childNationalItem, value);
 	}
-
+	
 	public void selectMaritalStatus(String value) {
 		selectInDropdownCustom(driver, maritalDropdown, childMaritalItem, value);
 	}
 
 	public void selectLienceExDatePicker(String randomLienceExDay) {
 		waitForElementVisible(driver, licenseExpireDatePicker);
+		clearContentInElement(driver, licenseExpireDatePicker);
 		sendkeyToElement(driver, licenseExpireDatePicker, randomLienceExDay);
 	}
 
 	public void selectDateOfBirthPicker(String randombirthDay) {
 		waitForElementVisible(driver, birthDatePicker);
+		clearContentInElement(driver, birthDatePicker);
 		sendkeyToElement(driver, birthDatePicker, randombirthDay);		
 	}
 

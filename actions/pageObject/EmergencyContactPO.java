@@ -14,6 +14,10 @@ public class EmergencyContactPO extends BaseActions {
 	
 	@FindBy(how = How.XPATH, using = "//label[text()='Select File']/parent::div/following-sibling::div/input")	
 	private WebElement browseButton;
+
+	@FindBy(how = How.XPATH, using = "//a[contains(text(),'Job')]")	
+	private WebElement jobLink;
+
 	WebDriver driver;
 	
 	public EmergencyContactPO(WebDriver driver) {
@@ -28,5 +32,9 @@ public class EmergencyContactPO extends BaseActions {
 	public void clickToBrowseButton(String filename) {
 		uploadMultipleFiles(driver, browseButton,filename);
 	}
-
+	public void clickToJobLink() {
+		waitForElementClickable(driver, jobLink);
+		clickToElement(driver,jobLink);		
+	}
+	
 }

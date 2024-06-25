@@ -64,6 +64,6 @@ public class EmployeeListPO extends BaseActions {
 	}
 	public void clickToEditIcon() {
 		waitForElementClickable(driver, editButton);
-		clickToElement(driver, editButton);
+		clickToElementByJS(driver, editButton);
 	}	
 }

@@ -7,8 +7,10 @@ import java.util.Set;
 
 import org.openqa.selenium.Alert;
 import org.openqa.selenium.By;
+import org.openqa.selenium.ElementClickInterceptedException;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -150,6 +152,10 @@ public class BasePageFactory {
 		return driver.findElement(getByLocatorType(locatorType));
 	}
 	
+	public void clearContentInElement(WebDriver driver, WebElement element) {
+		element.getText();
+		element.clear();
+	}
 	
 	public void clickToElement(WebDriver driver, WebElement element) {
 		element.click();
@@ -159,8 +165,9 @@ public class BasePageFactory {
 		getElement(driver, element).click();
 	}
 
-	public void clickToElementByJS(WebDriver driver, WebElement element, String value) {
+	public void clickToElementByJS(WebDriver driver, WebElement element) {
 		JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		jsExecutor.executeScript("arguments[0].scrollIntoView(true);", element);
 		jsExecutor.executeScript("arguments[0].click();", getElement(driver, element));
 	}
 	
@@ -185,23 +192,40 @@ public class BasePageFactory {
 		dropdown.selectByVisibleText(value);
 	}
 	
-	
-	public void selectInDropdownCustom(WebDriver driver, WebElement parentElement, List<WebElement> childElement,String value) {
-		waitForElementClickable(driver, parentElement);
-		parentElement.click();
-		sleepInSecond(2);
-		WebDriverWait explicitWait = new WebDriverWait(driver, Timeout);
-		List<WebElement> allItems = explicitWait.until(ExpectedConditions.visibilityOfAllElements(childElement)); 
-		for (WebElement item : allItems) {
-			if (item.getText().trim().equals(value)) {
-				JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
-				jsExecutor.executeScript("arguments[0].scrollIntoView(true)", item);
-				sleepInSecond(1);
-				item.click();
-				break;
-			}
-		}
+	public void selectInDropdownCustom(WebDriver driver, WebElement parentElement, List<WebElement> childElement, String value) {
+		 waitForElementClickable(driver, parentElement);
+		 parentElement.click();
+		 sleepInSecond(5);
+	        
+		 WebDriverWait explicitWait = new WebDriverWait(driver, Timeout);
+		 if (childElement != null && !childElement.isEmpty()) {
+			 explicitWait.until(ExpectedConditions.visibilityOfAllElements(childElement));
+			 for (WebElement item : childElement) {
+		        if (item.getText().trim().contains(value)) {
+		            sleepInSecond(3);
+		            try {
+		                item.click();
+		            } catch (ElementClickInterceptedException e) {
+		                JavascriptExecutor jsExecutor = (JavascriptExecutor) driver;
+		                jsExecutor.executeScript("arguments[0].scrollIntoView(true)", item);
+		            	jsExecutor.executeScript("arguments[0].click();", item);
+		            }
+			            break;
+			        }
+			 }
+		 }else{
+			throw new NoSuchElementException("Child elements list is empty or null.");
+		 }
 	}
+
+	private void sleepInSecond(int seconds) {
+	    try {
+	        Thread.sleep(seconds * 1000);
+	    } catch (InterruptedException e) {
+	        Thread.currentThread().interrupt();
+	    }
+	}
+
 	
 	public void sleepInSecond(long time) {
 		try {

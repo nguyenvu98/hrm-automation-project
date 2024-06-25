@@ -8,8 +8,8 @@
         <methods>
           <include name="afterClass"/>
           <include name="Employee_01_Add_New" invocation-numbers="0"/>
+          <include name="Employee_06_Salary"/>
           <include name="beforeClass"/>
-          <include name="Employee_02_Personal_Details" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.hrm.pim.PIM_01_Employee -->
     </classes>
@@ -19,10 +19,13 @@
     <classes>
       <class name="com.hrm.pim.PIM_01_Employee">
         <methods>
+          <include name="Employee_05_Job"/>
           <include name="afterClass"/>
+          <include name="Employee_04_Emergency_Contact"/>
+          <include name="Employee_03_Contact_Details"/>
           <include name="Employee_01_Add_New" invocation-numbers="0"/>
+          <include name="Employee_06_Salary"/>
           <include name="beforeClass"/>
-          <include name="Employee_02_Personal_Details" invocation-numbers="0"/>
         </methods>
       </class> <!-- com.hrm.pim.PIM_01_Employee -->
     </classes>

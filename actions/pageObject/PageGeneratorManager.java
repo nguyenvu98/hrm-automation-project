@@ -31,4 +31,12 @@ public class PageGeneratorManager {
 	public static EmergencyContactPO getEmergencyContactPO(WebDriver driver) {
 		return new EmergencyContactPO(driver);
 	}
+	
+	public static JobPO getJobPO(WebDriver driver) {
+		return new JobPO(driver);
+	}
+	
+	public static SalaryPO getSalaryPO(WebDriver driver) {
+		return new SalaryPO(driver);
+	}
 }

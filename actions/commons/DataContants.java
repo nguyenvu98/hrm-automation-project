@@ -22,8 +22,8 @@ public class DataContants {
 	public static final String HOME_BUMBER = "0234567883";
 	public static final String MOBILE_NUMBER = "067576587";
 	public static final String WORK_NUMBER = "04354364690";
-	public static final String WORK_EMAIL = "abc@cba.com";
-	public static final String ORTHER_EMAIL = "orther@yahoo.com";
+	public static final String WORK_EMAIL = "abc@abc"+EMP_ID+".com";
+	public static final String ORTHER_EMAIL = "orther@"+EMP_ID+".com";
 
 
 	
@@ -51,7 +51,7 @@ public class DataContants {
 		
 		int ranDay = 1 + number.nextInt(28);
 		int ranMonth = 1 + number.nextInt(12);
-		int ranYear = 1000 + number.nextInt(99);
+		int ranYear = 1900 + number.nextInt(99);
 		
 		LocalDate date = LocalDate.of(ranYear, ranMonth, ranDay);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd");

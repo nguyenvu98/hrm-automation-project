@@ -65,22 +65,27 @@ public class ContactDetailPO extends BaseActions {
 	}
 	public void sendkeyToStreet1Input(String value) {
 		waitForElementVisible(driver,street1);
+		clearContentInElement(driver,street1);
 		sendkeyToElement(driver, street1, value);
 	}
 	public void sendkeyToStreet2Input(String value) {
 		waitForElementVisible(driver,street2);
+		clearContentInElement(driver,street2);
 		sendkeyToElement(driver, street2, value);		
 	}
 	public void sendkeyToCityInput(String value) {
 		waitForElementVisible(driver,city);
+		clearContentInElement(driver,city);
 		sendkeyToElement(driver, city, value);		
 	}
 	public void sendkeyToStateInput(String value) {
 		waitForElementVisible(driver,state);
+		clearContentInElement(driver,state);
 		sendkeyToElement(driver, state, value);		
 	}
 	public void sendkeyToZIPInput(String value) {
 		waitForElementVisible(driver,zip);
+		clearContentInElement(driver,zip);
 		sendkeyToElement(driver, zip, value);				
 	}
 	public void selectCountryDropdown(String value) {
@@ -88,22 +93,27 @@ public class ContactDetailPO extends BaseActions {
 	}
 	public void sendkeyToHomeNumberInput(String value) {
 		waitForElementVisible(driver,homeNumber);
+		clearContentInElement(driver,homeNumber);
 		sendkeyToElement(driver, homeNumber, value);		
 	}
 	public void sendkeyToMobileNumberInput(String value) {
 		waitForElementVisible(driver,mobileNumber);
+		clearContentInElement(driver,mobileNumber);
 		sendkeyToElement(driver, mobileNumber, value);		
 	}
 	public void sendkeyToWorkNumberInput(String value) {
 		waitForElementVisible(driver,workNumber);
+		clearContentInElement(driver,workNumber);
 		sendkeyToElement(driver, workNumber, value);		
 	}
 	public void sendkeyToWorkEmailInput(String value) {
 		waitForElementVisible(driver,workEmail);
+		clearContentInElement(driver,workEmail);
 		sendkeyToElement(driver, workEmail, value);		
 	}
 	public void sendkeyToOtherEmailInput(String value) {
 		waitForElementVisible(driver,otherEmail);
+		clearContentInElement(driver,otherEmail);
 		sendkeyToElement(driver, otherEmail, value);		
 	}
 	public void clickToEmergencyContactLink() {

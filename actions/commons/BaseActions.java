@@ -17,6 +17,7 @@ public class BaseActions extends BasePageFactory {
 	@FindBy(how = How.XPATH, using = "//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]")
 	private WebElement successMessage;
 	
+	
 	@FindBy(how = How.XPATH, using = "//div[@class='oxd-form-actions']/button[@type='submit']")
 	private WebElement saveButton;
 
@@ -49,5 +50,7 @@ public class BaseActions extends BasePageFactory {
 		clickToElement(driver, saveButton);
 
 	}
+	
+	
 
 }
