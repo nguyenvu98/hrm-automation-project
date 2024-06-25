@@ -183,17 +183,7 @@ public class PIM_01_Employee extends BaseTest{
 //	public void Employee_07_Report_To() {
 //		
 //	}
-//	
-//	@Test
-//	public void Employee_10_Qualification() {
-//		
-//	}
-//	
-//	@Test
-//	public void Employee_11_Membership() {
-//		
-//	}
-
+	
 	@AfterClass(alwaysRun = true)
 	public void afterClass() {
 	   if (driver != null) {

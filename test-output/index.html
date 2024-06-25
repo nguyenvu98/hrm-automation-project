@@ -25,7 +25,7 @@
       <span class="top-banner-title-font">Test results</span>
       <button id="button" class="button">Switch Retro Theme</button> <!-- button -->
       <br/>
-      <span class="top-banner-font-1">1 suite, 7 failed tests</span>
+      <span class="top-banner-font-1">1 suite, 6 failed tests</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -92,7 +92,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">12 methods, 7 failed,   5 passed</span>
+                    <span class="method-stats">12 methods, 6 failed,   6 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -119,11 +119,6 @@
                       <span>
                         <img src="failed.png" width="3%"/>
                         <a href="#" panel-name="suite-OrangeHRM" title="com.hrm.pim.PIM_01_Employee" class="method navigator-link" hash-for-method="Employee_04_Emergency_Contact">Employee_04_Emergency_Contact</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-OrangeHRM" title="com.hrm.pim.PIM_01_Employee" class="method navigator-link" hash-for-method="Employee_05_Job">Employee_05_Job</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                       <span>
@@ -170,6 +165,11 @@
                         <a href="#" panel-name="suite-OrangeHRM" title="com.hrm.pim.PIM_01_Employee" class="method navigator-link" hash-for-method="Employee_05_Job">Employee_05_Job</a> <!-- method navigator-link -->
                       </span>
                       <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-OrangeHRM" title="com.hrm.pim.PIM_01_Employee" class="method navigator-link" hash-for-method="Employee_05_Job">Employee_05_Job</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
                     </div> <!-- method-list-content passed suite-OrangeHRM -->
                   </li>
                 </ul>
@@ -199,10 +199,10 @@
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [01fa1466fc5006a961af204e6cd7a743, clickElement {id=f.1EA56C3552D0DEEEA5D1FCC37A9B6BCC.d.EADCA400F2C5B6EEACA32CFA03DF1A9E.e.128}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62196}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62196/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (01fa1466fc5006a961af204e6cd7a743)] -&gt; xpath: //div[@class=&apos;oxd-form-actions&apos;]/button[@type=&apos;submit&apos;]]
-Session ID: 01fa1466fc5006a961af204e6cd7a743
+Command: [a0cc7f220c48ccbe7ea2b3fb632f0a02, clickElement {id=f.4A7F6AE1123BD11E16CD6DBAE3C2282A.d.D03AC5ACE9A899C7A7F5F71ED8405F23.e.120}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62587}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62587/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Element: [[ChromeDriver: chrome on windows (a0cc7f220c48ccbe7ea2b3fb632f0a02)] -&gt; xpath: //div[@class=&apos;oxd-form-actions&apos;]/button[@type=&apos;submit&apos;]]
+Session ID: a0cc7f220c48ccbe7ea2b3fb632f0a02
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -228,15 +228,22 @@ Session ID: 01fa1466fc5006a961af204e6cd7a743
                   </a> <!-- Employee_01_Add_New(public void com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(java.lang.reflect.Method)) -->
                   <span class="method-name">Employee_01_Add_New</span>
                   <span class="parameters">(public void com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(java.lang.reflect.Method))</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element &lt;button type=&quot;submit&quot; class=&quot;oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space&quot; data-v-10d463b7=&quot;&quot; data-v-8c6e0396=&quot;&quot;&gt;...&lt;/button&gt; is not clickable at point (1185, 594). Other element would receive the click: &lt;div class=&quot;oxd-form-loader&quot; data-v-d5bfe35b=&quot;&quot;&gt;...&lt;/div&gt;
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[text()=&apos;First (&amp; Middle) Name&apos;]/parent::div/parent::div/following-sibling::div//div[contains(@class,&apos;oxd-table-cell&apos;)][3]/div&apos; (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
+	at pageObject.EmployeeListPO.getFirstname(EmployeeListPO.java:58)
+	at com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(PIM_01_Employee.java:88)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[text()=&apos;First (&amp; Middle) Name&apos;]/parent::div/parent::div/following-sibling::div//div[contains(@class,&apos;oxd-table-cell&apos;)][3]/div&quot;}
   (Session info: MicrosoftEdge=126.0.2592.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [8ae2709348e347837c4cff799b92a68b, clickElement {id=f.EAD098239203461D13F392CD74240D47.d.73F1254B40013BB505FD1AD4672DB91D.e.130}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62427}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62427/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[EdgeDriver: MicrosoftEdge on windows (8ae2709348e347837c4cff799b92a68b)] -&gt; xpath: //div[@class=&apos;oxd-form-actions&apos;]/button[@type=&apos;submit&apos;]]
-Session ID: 8ae2709348e347837c4cff799b92a68b
+Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[text()=&apos;First (&amp; Middle) Name&apos;]/parent::div/parent::div/following-sibling::div//div[contains(@class,&apos;oxd-table-cell&apos;)][3]/div}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b050f0bf6ab7143c589438dab60715ff
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -244,15 +251,19 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
 	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
 	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-	at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy13.click(Unknown Source)
-	at commons.BasePageFactory.clickToElement(BasePageFactory.java:161)
-	at pageObject.EmployeeListPO.clickToSearchButton(EmployeeListPO.java:54)
-	at com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(PIM_01_Employee.java:84)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 34 stack frames
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -261,15 +272,22 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
                   <a name="Employee_03_Contact_Details">
                   </a> <!-- Employee_03_Contact_Details -->
                   <span class="method-name">Employee_03_Contact_Details</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&apos; (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
+	at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
+	at com.hrm.pim.PIM_01_Employee.Employee_03_Contact_Details(PIM_01_Employee.java:125)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&quot;}
   (Session info: MicrosoftEdge=126.0.2592.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [8ae2709348e347837c4cff799b92a68b, findElement {value=//label[text()=&apos;Street 1&apos;]/parent::div/following-sibling::div/input, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62427}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62427/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8ae2709348e347837c4cff799b92a68b
+Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b050f0bf6ab7143c589438dab60715ff
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -283,16 +301,13 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.toString(Unknown Source)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.ExpectedConditions$10.toString(ExpectedConditions.java:295)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-	at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
-	at pageObject.ContactDetailPO.sendkeyToStreet1Input(ContactDetailPO.java:67)
-	at com.hrm.pim.PIM_01_Employee.Employee_03_Contact_Details(PIM_01_Employee.java:112)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 30 stack frames
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -301,15 +316,22 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
                   <a name="Employee_04_Emergency_Contact">
                   </a> <!-- Employee_04_Emergency_Contact -->
                   <span class="method-name">Employee_04_Emergency_Contact</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&apos; (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
+	at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
+	at com.hrm.pim.PIM_01_Employee.Employee_04_Emergency_Contact(PIM_01_Employee.java:138)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&quot;}
   (Session info: MicrosoftEdge=126.0.2592.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
 Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [8ae2709348e347837c4cff799b92a68b, findElement {value=//div[@class=&apos;orangehrm-attachment&apos;]//div[contains(@class,&apos;orangehrm-vertical-padding&apos;)]/div/button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62427}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62427/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8ae2709348e347837c4cff799b92a68b
+Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b050f0bf6ab7143c589438dab60715ff
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -323,56 +345,13 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.toString(Unknown Source)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:669)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-	at commons.BasePageFactory.waitForElementClickable(BasePageFactory.java:376)
-	at pageObject.EmergencyContactPO.clickToAddButton(EmergencyContactPO.java:29)
-	at com.hrm.pim.PIM_01_Employee.Employee_04_Emergency_Contact(PIM_01_Employee.java:132)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 30 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Employee_05_Job">
-                  </a> <!-- Employee_05_Job -->
-                  <span class="method-name">Employee_05_Job</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=126.0.2592.68)
-Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc&apos;
-System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [8ae2709348e347837c4cff799b92a68b, findElement {value=//a[contains(text(),&apos;Job&apos;)], using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62427}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62427/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8ae2709348e347837c4cff799b92a68b
-	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.toString(Unknown Source)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:669)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-	at commons.BasePageFactory.waitForElementClickable(BasePageFactory.java:376)
-	at pageObject.EmergencyContactPO.clickToJobLink(EmergencyContactPO.java:36)
-	at com.hrm.pim.PIM_01_Employee.Employee_05_Job(PIM_01_Employee.java:143)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 30 stack frames
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -381,32 +360,22 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
                   <a name="Employee_06_Salary">
                   </a> <!-- Employee_06_Salary -->
                   <span class="method-name">Employee_06_Salary</span>
-                  <div class="stack-trace">java.lang.Error: Unresolved compilation problems: 
-	accountNUmber cannot be resolved to a variable
-	accountNUmber cannot be resolved to a variable
-	accountNUmber cannot be resolved to a variable
-
-	at pageObject.SalaryPO.sendkeyToAccountNumberInput(SalaryPO.java:77)
-	at com.hrm.pim.PIM_01_Employee.Employee_06_Salary(PIM_01_Employee.java:173)
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&apos; (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
+	at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
+	at com.hrm.pim.PIM_01_Employee.Employee_06_Salary(PIM_01_Employee.java:179)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 27 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="Employee_06_Salary">
-                  </a> <!-- Employee_06_Salary -->
-                  <span class="method-name">Employee_06_Salary</span>
-                  <div class="stack-trace">org.openqa.selenium.NoSuchWindowException: no such window: target window already closed
-from unknown error: web view not found
-  (Session info: MicrosoftEdge=126.0.2592.68)
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&quot;}
+  (Session info: chrome=126.0.6478.114)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
 Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc&apos;
 System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [8ae2709348e347837c4cff799b92a68b, findElement {value=//h6[text()=&apos;Assigned Salary Components&apos;]/parent::div/button, using=xpath}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62427}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62427/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: 8ae2709348e347837c4cff799b92a68b
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Command: [a0cc7f220c48ccbe7ea2b3fb632f0a02, findElement {using=xpath, value=//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62587}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62587/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: a0cc7f220c48ccbe7ea2b3fb632f0a02
 	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
 	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
@@ -420,16 +389,57 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
 	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
 	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
 	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-	at com.sun.proxy.$Proxy13.toString(Unknown Source)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.ExpectedConditions$23.toString(ExpectedConditions.java:669)
-	at java.base/java.lang.String.valueOf(String.java:2951)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:225)
-	at commons.BasePageFactory.waitForElementClickable(BasePageFactory.java:376)
-	at pageObject.SalaryPO.clickToAddButton(SalaryPO.java:53)
-	at com.hrm.pim.PIM_01_Employee.Employee_06_Salary(PIM_01_Employee.java:164)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames
+</div> <!-- stack-trace -->
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Employee_06_Salary">
+                  </a> <!-- Employee_06_Salary -->
+                  <span class="method-name">Employee_06_Salary</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator &apos;By.xpath: //div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&apos; (tried for 50 second(s) with 500 milliseconds interval)
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
+	at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
+	at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
+	at com.hrm.pim.PIM_01_Employee.Employee_06_Salary(PIM_01_Employee.java:179)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-... Removed 30 stack frames
+Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {&quot;method&quot;:&quot;xpath&quot;,&quot;selector&quot;:&quot;//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]&quot;}
+  (Session info: MicrosoftEdge=126.0.2592.68)
+For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
+Build info: version: &apos;4.18.0&apos;, revision: &apos;b6bf9de7cc&apos;
+System info: os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;11.0.20&apos;
+Driver info: org.openqa.selenium.edge.EdgeDriver
+Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[@id=&apos;oxd-toaster_1&apos;]/div/div[1]/div[2]//p[contains(@class,&apos;oxd-text--toast-message&apos;)]}]
+Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+Session ID: b050f0bf6ab7143c589438dab60715ff
+	at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
+	at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
+	at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
+	at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
+	at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
+	at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
+	at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
+	at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
+	... 31 more
+... Removed 31 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -469,6 +479,13 @@ Session ID: 8ae2709348e347837c4cff799b92a68b
                   <a name="Employee_04_Emergency_Contact">
                   </a> <!-- Employee_04_Emergency_Contact -->
                   <span class="method-name">Employee_04_Emergency_Contact</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="Employee_05_Job">
+                  </a> <!-- Employee_05_Job -->
+                  <span class="method-name">Employee_05_Job</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
               <div class="method">
@@ -544,58 +561,58 @@ data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
 data.addRows(12);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'Employee_03_Contact_Details')
+data.setCell(0, 1, 'Employee_06_Salary')
 data.setCell(0, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(0, 3, 55346);
+data.setCell(0, 3, 118576);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'Employee_05_Job')
+data.setCell(1, 1, 'Employee_06_Salary')
 data.setCell(1, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(1, 3, 50427);
+data.setCell(1, 3, 117397);
 data.setCell(2, 0, 2)
-data.setCell(2, 1, 'Employee_06_Salary')
+data.setCell(2, 1, 'Employee_03_Contact_Details')
 data.setCell(2, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(2, 3, 50393);
+data.setCell(2, 3, 114228);
 data.setCell(3, 0, 3)
-data.setCell(3, 1, 'Employee_04_Emergency_Contact')
+data.setCell(3, 1, 'Employee_01_Add_New')
 data.setCell(3, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(3, 3, 50144);
+data.setCell(3, 3, 100729);
 data.setCell(4, 0, 4)
-data.setCell(4, 1, 'Employee_02_Personal_Details')
+data.setCell(4, 1, 'Employee_04_Emergency_Contact')
 data.setCell(4, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(4, 3, 25847);
+data.setCell(4, 3, 97054);
 data.setCell(5, 0, 5)
 data.setCell(5, 1, 'Employee_02_Personal_Details')
 data.setCell(5, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(5, 3, 25778);
+data.setCell(5, 3, 26347);
 data.setCell(6, 0, 6)
-data.setCell(6, 1, 'Employee_03_Contact_Details')
+data.setCell(6, 1, 'Employee_02_Personal_Details')
 data.setCell(6, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(6, 3, 24626);
+data.setCell(6, 3, 26307);
 data.setCell(7, 0, 7)
-data.setCell(7, 1, 'Employee_06_Salary')
+data.setCell(7, 1, 'Employee_03_Contact_Details')
 data.setCell(7, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(7, 3, 20808);
+data.setCell(7, 3, 24542);
 data.setCell(8, 0, 8)
 data.setCell(8, 1, 'Employee_05_Job')
 data.setCell(8, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(8, 3, 18810);
+data.setCell(8, 3, 18623);
 data.setCell(9, 0, 9)
-data.setCell(9, 1, 'Employee_01_Add_New')
+data.setCell(9, 1, 'Employee_05_Job')
 data.setCell(9, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(9, 3, 9040);
+data.setCell(9, 3, 16935);
 data.setCell(10, 0, 10)
 data.setCell(10, 1, 'Employee_01_Add_New')
 data.setCell(10, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(10, 3, 8543);
+data.setCell(10, 3, 8471);
 data.setCell(11, 0, 11)
 data.setCell(11, 1, 'Employee_04_Emergency_Contact')
 data.setCell(11, 2, 'com.hrm.pim.PIM_01_Employee')
-data.setCell(11, 3, 7199);
+data.setCell(11, 3, 7133);
 window.suiteTableData['OrangeHRM']= { tableData: data, tableDiv: 'times-div-OrangeHRM'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 5 minutes</span>
+              <span class="suite-total-time">Total running time: 11 minutes</span>
               <div id="times-div-OrangeHRM">
               </div> <!-- times-div-OrangeHRM -->
             </div> <!-- times-div -->
@@ -630,75 +647,73 @@ return data;
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Employee_01_Add_New(public void com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(java.lang.reflect.Method))</span>
-                <span class="method-start">13336 ms</span>
+                <span class="method-start">7169 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Employee_02_Personal_Details(public void com.hrm.pim.PIM_01_Employee.Employee_02_Personal_Details(java.lang.reflect.Method))</span>
-                <span class="method-start">21889 ms</span>
+                <span class="method-start">15650 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Employee_03_Contact_Details</span>
-                <span class="method-start">47739 ms</span>
+                <span class="method-start">41960 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Employee_04_Emergency_Contact</span>
-                <span class="method-start">72369 ms</span>
+                <span class="method-start">66503 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Employee_05_Job</span>
-                <span class="method-start">79570 ms</span>
+                <span class="method-start">73639 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Employee_06_Salary</span>
-                <span class="method-start">98383 ms</span>
+                <span class="method-start">90576 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">119195 ms</span>
+                <span class="method-start">207977 ms</span>
               </div> <!-- configuration-class after -->
               <div class="configuration-class before">
                 <span class="method-name">beforeClass(edge)</span>
-                <span class="method-start">119508 ms</span>
+                <span class="method-start">208288 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Employee_01_Add_New(public void com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(java.lang.reflect.Method))</span>
-                <span class="method-start">126410 ms</span>
+                <span class="method-start">218326 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <span class="method-name">Employee_02_Personal_Details(public void com.hrm.pim.PIM_01_Employee.Employee_02_Personal_Details(java.lang.reflect.Method))</span>
-                <span class="method-start">135455 ms</span>
+                <span class="method-start">319067 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Employee_03_Contact_Details</span>
-                <span class="method-start">161239 ms</span>
+                <span class="method-start">345415 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Employee_04_Emergency_Contact</span>
-                <span class="method-start">216588 ms</span>
+                <span class="method-start">459645 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
                 <span class="method-name">Employee_05_Job</span>
-                <span class="method-start">266740 ms</span>
+                <span class="method-start">556703 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
                 <span class="method-name">Employee_06_Salary</span>
-                <span class="method-start">317177 ms</span>
+                <span class="method-start">575327 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">afterClass</span>
-                <span class="method-start">367575 ms</span>
+                <span class="method-start">693905 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
