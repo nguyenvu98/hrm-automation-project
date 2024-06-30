@@ -20,6 +20,16 @@ public class BaseActions extends BasePageFactory {
 	
 	@FindBy(how = How.XPATH, using = "//div[@class='oxd-form-actions']/button[@type='submit']")
 	private WebElement saveButton;
+	
+	
+	@FindBy(how = How.XPATH, using = "//label[text()='Job Title']/parent::div/following-sibling::div/input")	
+	private WebElement jobTitleInput;
+	
+	@FindBy(how = How.XPATH, using = "//label[text()='Job Description']/parent::div/following-sibling::div/textarea")	
+	private WebElement jobDesInput;
+	
+	@FindBy(how = How.XPATH, using = "//div[@class='orangehrm-header-container']/div/button")
+	private WebElement addBUtton;
 
 	WebDriver driver;
 	public BaseActions(WebDriver driver) {
@@ -51,6 +61,21 @@ public class BaseActions extends BasePageFactory {
 
 	}
 	
+	public String getJobTitles() {
+		String empID = getElementAttribute(driver, jobTitleInput, "value");
+		System.out.println(empID);
+		return empID;		
+	}
 	
+	public String getJobDes() {
+		String empID = getElementAttribute(driver, jobTitleInput, "value");
+		System.out.println(empID);
+		return empID;	
+	}
+	
+	public void clickToAddButton() {
+		waitForElementClickable(driver, addBUtton);
+		clickToElement(driver, addBUtton);
+	}
 
 }

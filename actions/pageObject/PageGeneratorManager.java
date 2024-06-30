@@ -39,4 +39,24 @@ public class PageGeneratorManager {
 	public static SalaryPO getSalaryPO(WebDriver driver) {
 		return new SalaryPO(driver);
 	}
+	
+	public static UserManagementPO getUserManagementPO(WebDriver driver) {
+		return new UserManagementPO(driver);
+	}
+	
+	public static JobTitlesPO geJobTitlesPO(WebDriver driver) {
+		return new JobTitlesPO(driver);
+	}
+	
+	public static AddJobTitlePO geAddJobTitlePO(WebDriver driver) {
+		return new AddJobTitlePO(driver);
+	}
+	
+	public static PageGradesPO getPageGradesPO(WebDriver driver) {
+		return new PageGradesPO(driver);
+	}
+	
+	public static AddPayGradePO getAddPayGradePO(WebDriver driver) {
+		return new AddPayGradePO(driver);
+	}
 }

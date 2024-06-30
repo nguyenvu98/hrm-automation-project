@@ -15,7 +15,9 @@ public class DashboardPO extends BaseActions {
 	@FindBy(how = How.XPATH, using = "//ul[@class='oxd-main-menu']//span[text()='PIM']")
 	private WebElement pimModul;
 	
-	
+
+	@FindBy(how = How.XPATH, using = "//ul[@class='oxd-main-menu']//span[text()='Admin']")
+	private WebElement adminModul;
 	
 	WebDriver driver;
 	public DashboardPO(WebDriver driver) {
@@ -28,9 +30,10 @@ public class DashboardPO extends BaseActions {
 		waitForElementVisible(driver, pimModul);
 		clickToElement(driver, pimModul);
 	}
-	
-//	public void clickToPIMModule() {
-//		waitForElementClickable(driver,DashboardUI.PIM_MODULE);
-//		clickToElement(driver, DashboardUI.PIM_MODULE);
-//	}
+
+	public void clickToAdminModule() {
+		waitForElementVisible(driver, adminModul);
+		clickToElement(driver, adminModul);		
+	}
+
 }

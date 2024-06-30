@@ -195,7 +195,7 @@ public class BasePageFactory {
 	public void selectInDropdownCustom(WebDriver driver, WebElement parentElement, List<WebElement> childElement, String value) {
 		 waitForElementClickable(driver, parentElement);
 		 parentElement.click();
-		 sleepInSecond(5);
+		 sleepInSecond(3);
 	        
 		 WebDriverWait explicitWait = new WebDriverWait(driver, Timeout);
 		 if (childElement != null && !childElement.isEmpty()) {

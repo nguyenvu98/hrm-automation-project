@@ -15,13 +15,17 @@
 	<test name="Run on Chrome" preserve-order="true">
 		<parameter name="browser" value="chrome"></parameter>
 		<classes>
-			<class name="com.hrm.pim.PIM_01_Employee" />
+<!--		<class name="com.hrm.pim.PIM_01_Employee" />-->
+			<class name="com.hrm.admin.Admin_01_Job_Titles" />
+			<class name="com.hrm.admin.Admin_02_Pay_Grades" />
 		</classes>
 	</test> 
 	<test name="Run on Edge" preserve-order="true">
 		<parameter name="browser" value="edge"></parameter>
 		<classes>
-			<class name="com.hrm.pim.PIM_01_Employee" />
+<!--		<class name="com.hrm.pim.PIM_01_Employee" />-->
+			<class name="com.hrm.admin.Admin_01_Job_Titles" />
+			<class name="com.hrm.admin.Admin_02_Pay_Grades" />
 		</classes>
 	</test>
 	
