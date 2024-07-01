@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="12" passed="6" failed="6" skipped="0">
+<testng-results ignored="0" total="4" passed="2" failed="2" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2024-06-25T16:07:59 ICT" name="OrangeHRM" finished-at="2024-06-25T16:19:34 ICT" duration-ms="695432">
+  <suite started-at="2024-06-30T19:42:04 ICT" name="OrangeHRM" finished-at="2024-06-30T19:43:39 ICT" duration-ms="95271">
     <groups>
     </groups>
-    <test started-at="2024-06-25T16:07:59 ICT" name="Run on Chrome" finished-at="2024-06-25T16:11:27 ICT" duration-ms="208225">
-      <class name="com.hrm.pim.PIM_01_Employee">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:07:59 ICT" name="beforeClass" finished-at="2024-06-25T16:08:06 ICT" duration-ms="7154" status="PASS">
+    <test started-at="2024-06-30T19:42:04 ICT" name="Run on Chrome" finished-at="2024-06-30T19:42:51 ICT" duration-ms="46929">
+      <class name="com.hrm.admin.Admin_01_Job_Titles">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.hrm.admin.Admin_01_Job_Titles@3de8f619]" started-at="2024-06-30T19:42:04 ICT" name="beforeClass" finished-at="2024-06-30T19:42:18 ICT" duration-ms="14387" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -18,127 +18,55 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Employee_01_Add_New(java.lang.reflect.Method)[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:08:06 ICT" name="Employee_01_Add_New" finished-at="2024-06-25T16:08:15 ICT" duration-ms="8471" status="FAIL">
+        <test-method signature="Employee_01_Add_New(java.lang.reflect.Method)[pri:0, instance:com.hrm.admin.Admin_01_Job_Titles@3de8f619]" started-at="2024-06-30T19:42:18 ICT" name="Employee_01_Add_New" finished-at="2024-06-30T19:42:22 ICT" duration-ms="3620" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(java.lang.reflect.Method)]]>
+                <![CDATA[public void com.hrm.admin.Admin_01_Job_Titles.Employee_01_Add_New(java.lang.reflect.Method)]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.ElementClickInterceptedException">
-            <message>
-              <![CDATA[element click intercepted: Element <button type="submit" class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space" data-v-10d463b7="" data-v-8c6e0396="">...</button> is not clickable at point (1232, 574). Other element would receive the click: <div class="oxd-form-loader" data-v-d5bfe35b="">...</div>
-  (Session info: chrome=126.0.6478.114)
-Build info: version: '4.18.0', revision: 'b6bf9de7cc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a0cc7f220c48ccbe7ea2b3fb632f0a02, clickElement {id=f.4A7F6AE1123BD11E16CD6DBAE3C2282A.d.D03AC5ACE9A899C7A7F5F71ED8405F23.e.120}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62587}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62587/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a0cc7f220c48ccbe7ea2b3fb632f0a02)] -> xpath: //div[@class='oxd-form-actions']/button[@type='submit']]
-Session ID: a0cc7f220c48ccbe7ea2b3fb632f0a02]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementClickInterceptedException: element click intercepted: Element <button type="submit" class="oxd-button oxd-button--medium oxd-button--secondary orangehrm-left-space" data-v-10d463b7="" data-v-8c6e0396="">...</button> is not clickable at point (1232, 574). Other element would receive the click: <div class="oxd-form-loader" data-v-d5bfe35b="">...</div>
-  (Session info: chrome=126.0.6478.114)
-Build info: version: '4.18.0', revision: 'b6bf9de7cc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a0cc7f220c48ccbe7ea2b3fb632f0a02, clickElement {id=f.4A7F6AE1123BD11E16CD6DBAE3C2282A.d.D03AC5ACE9A899C7A7F5F71ED8405F23.e.120}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62587}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62587/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Element: [[ChromeDriver: chrome on windows (a0cc7f220c48ccbe7ea2b3fb632f0a02)] -> xpath: //div[@class='oxd-form-actions']/button[@type='submit']]
-Session ID: a0cc7f220c48ccbe7ea2b3fb632f0a02
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:223)
-at org.openqa.selenium.remote.RemoteWebElement.click(RemoteWebElement.java:76)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy13.click(Unknown Source)
-at commons.BasePageFactory.clickToElement(BasePageFactory.java:161)
-at pageObject.EmployeeListPO.clickToSearchButton(EmployeeListPO.java:54)
-at com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(PIM_01_Employee.java:84)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementClickInterceptedException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Employee_01_Add_New -->
-        <test-method signature="Employee_02_Personal_Details(java.lang.reflect.Method)[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:08:15 ICT" name="Employee_02_Personal_Details" finished-at="2024-06-25T16:08:41 ICT" duration-ms="26307" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.hrm.admin.Admin_01_Job_Titles@3de8f619]" started-at="2024-06-30T19:42:22 ICT" name="afterClass" finished-at="2024-06-30T19:42:22 ICT" duration-ms="226" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.hrm.admin.Admin_01_Job_Titles -->
+      <class name="com.hrm.admin.Admin_02_Pay_Grades">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.hrm.admin.Admin_02_Pay_Grades@6f204a1a]" started-at="2024-06-30T19:42:22 ICT" name="beforeClass" finished-at="2024-06-30T19:42:35 ICT" duration-ms="13141" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.hrm.pim.PIM_01_Employee.Employee_02_Personal_Details(java.lang.reflect.Method)]]>
+                <![CDATA[chrome]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Employee_02_Personal_Details -->
-        <test-method signature="Employee_03_Contact_Details()[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:08:41 ICT" name="Employee_03_Contact_Details" finished-at="2024-06-25T16:09:06 ICT" duration-ms="24542" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Employee_03_Contact_Details -->
-        <test-method signature="Employee_04_Emergency_Contact()[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:09:06 ICT" name="Employee_04_Emergency_Contact" finished-at="2024-06-25T16:09:13 ICT" duration-ms="7133" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Employee_04_Emergency_Contact -->
-        <test-method signature="Employee_05_Job()[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:09:13 ICT" name="Employee_05_Job" finished-at="2024-06-25T16:09:30 ICT" duration-ms="16935" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Employee_05_Job -->
-        <test-method signature="Employee_06_Salary()[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:09:30 ICT" name="Employee_06_Salary" finished-at="2024-06-25T16:11:27 ICT" duration-ms="117397" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="Employee_01_Add_New(java.lang.reflect.Method)[pri:0, instance:com.hrm.admin.Admin_02_Pay_Grades@6f204a1a]" started-at="2024-06-30T19:42:35 ICT" name="Employee_01_Add_New" finished-at="2024-06-30T19:42:51 ICT" duration-ms="15222" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.hrm.admin.Admin_02_Pay_Grades.Employee_01_Add_New(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[expected [abc283129] but found [abc2831291000010000000]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
-at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
-at com.hrm.pim.PIM_01_Employee.Employee_06_Salary(PIM_01_Employee.java:179)
+              <![CDATA[java.lang.AssertionError: expected [abc283129] but found [abc2831291000010000000]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.hrm.admin.Admin_02_Pay_Grades.Employee_01_Add_New(Admin_02_Pay_Grades.java:87)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -167,53 +95,21 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]"}
-  (Session info: chrome=126.0.6478.114)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.0', revision: 'b6bf9de7cc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Command: [a0cc7f220c48ccbe7ea2b3fb632f0a02, findElement {using=xpath, value=//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]}]
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 126.0.6478.114, chrome: {chromedriverVersion: 126.0.6478.126 (d36ace6122e..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:62587}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62587/devtoo..., se:cdpVersion: 126.0.6478.114, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: a0cc7f220c48ccbe7ea2b3fb632f0a02
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 31 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Employee_06_Salary -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.hrm.pim.PIM_01_Employee@740fb309]" started-at="2024-06-25T16:11:27 ICT" name="afterClass" finished-at="2024-06-25T16:11:27 ICT" duration-ms="207" status="PASS">
+        </test-method> <!-- Employee_01_Add_New -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.hrm.admin.Admin_02_Pay_Grades@6f204a1a]" started-at="2024-06-30T19:42:51 ICT" name="afterClass" finished-at="2024-06-30T19:42:51 ICT" duration-ms="266" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.hrm.pim.PIM_01_Employee -->
+      </class> <!-- com.hrm.admin.Admin_02_Pay_Grades -->
     </test> <!-- Run on Chrome -->
-    <test started-at="2024-06-25T16:11:27 ICT" name="Run on Edge" finished-at="2024-06-25T16:19:34 ICT" duration-ms="487108">
-      <class name="com.hrm.pim.PIM_01_Employee">
-        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:11:27 ICT" name="beforeClass" finished-at="2024-06-25T16:11:37 ICT" duration-ms="10037" status="PASS">
+    <test started-at="2024-06-30T19:42:51 ICT" name="Run on Edge" finished-at="2024-06-30T19:43:39 ICT" duration-ms="48279">
+      <class name="com.hrm.admin.Admin_01_Job_Titles">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.hrm.admin.Admin_01_Job_Titles@34bde49d]" started-at="2024-06-30T19:42:51 ICT" name="beforeClass" finished-at="2024-06-30T19:43:05 ICT" duration-ms="13736" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -224,114 +120,55 @@ at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeClass -->
-        <test-method signature="Employee_01_Add_New(java.lang.reflect.Method)[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:11:37 ICT" name="Employee_01_Add_New" finished-at="2024-06-25T16:13:18 ICT" duration-ms="100729" status="FAIL">
+        <test-method signature="Employee_01_Add_New(java.lang.reflect.Method)[pri:0, instance:com.hrm.admin.Admin_01_Job_Titles@34bde49d]" started-at="2024-06-30T19:43:05 ICT" name="Employee_01_Add_New" finished-at="2024-06-30T19:43:08 ICT" duration-ms="3268" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(java.lang.reflect.Method)]]>
+                <![CDATA[public void com.hrm.admin.Admin_01_Job_Titles.Employee_01_Add_New(java.lang.reflect.Method)]]>
               </value>
             </param>
           </params>
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[text()='First (& Middle) Name']/parent::div/parent::div/following-sibling::div//div[contains(@class,'oxd-table-cell')][3]/div' (tried for 50 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[text()='First (& Middle) Name']/parent::div/parent::div/following-sibling::div//div[contains(@class,'oxd-table-cell')][3]/div' (tried for 50 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
-at pageObject.EmployeeListPO.getFirstname(EmployeeListPO.java:58)
-at com.hrm.pim.PIM_01_Employee.Employee_01_Add_New(PIM_01_Employee.java:88)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[text()='First (& Middle) Name']/parent::div/parent::div/following-sibling::div//div[contains(@class,'oxd-table-cell')][3]/div"}
-  (Session info: MicrosoftEdge=126.0.2592.68)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.0', revision: 'b6bf9de7cc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[text()='First (& Middle) Name']/parent::div/parent::div/following-sibling::div//div[contains(@class,'oxd-table-cell')][3]/div}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b050f0bf6ab7143c589438dab60715ff
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Employee_01_Add_New -->
-        <test-method signature="Employee_02_Personal_Details(java.lang.reflect.Method)[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:13:18 ICT" name="Employee_02_Personal_Details" finished-at="2024-06-25T16:13:44 ICT" duration-ms="26347" status="PASS">
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.hrm.admin.Admin_01_Job_Titles@34bde49d]" started-at="2024-06-30T19:43:08 ICT" name="afterClass" finished-at="2024-06-30T19:43:09 ICT" duration-ms="1377" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterClass -->
+      </class> <!-- com.hrm.admin.Admin_01_Job_Titles -->
+      <class name="com.hrm.admin.Admin_02_Pay_Grades">
+        <test-method is-config="true" signature="beforeClass(java.lang.String)[pri:0, instance:com.hrm.admin.Admin_02_Pay_Grades@1b1cfb87]" started-at="2024-06-30T19:43:09 ICT" name="beforeClass" finished-at="2024-06-30T19:43:23 ICT" duration-ms="13963" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.hrm.pim.PIM_01_Employee.Employee_02_Personal_Details(java.lang.reflect.Method)]]>
+                <![CDATA[edge]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Employee_02_Personal_Details -->
-        <test-method signature="Employee_03_Contact_Details()[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:13:45 ICT" name="Employee_03_Contact_Details" finished-at="2024-06-25T16:15:39 ICT" duration-ms="114228" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
+        </test-method> <!-- beforeClass -->
+        <test-method signature="Employee_01_Add_New(java.lang.reflect.Method)[pri:0, instance:com.hrm.admin.Admin_02_Pay_Grades@1b1cfb87]" started-at="2024-06-30T19:43:23 ICT" name="Employee_01_Add_New" finished-at="2024-06-30T19:43:38 ICT" duration-ms="14516" status="FAIL">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.hrm.admin.Admin_02_Pay_Grades.Employee_01_Add_New(java.lang.reflect.Method)]]>
+              </value>
+            </param>
+          </params>
+          <exception class="java.lang.AssertionError">
             <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)]]>
+              <![CDATA[expected [abc661232] but found [abc6612321000010000000]]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
-at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
-at com.hrm.pim.PIM_01_Employee.Employee_03_Contact_Details(PIM_01_Employee.java:125)
+              <![CDATA[java.lang.AssertionError: expected [abc661232] but found [abc6612321000010000000]
+at org.testng.Assert.fail(Assert.java:111)
+at org.testng.Assert.failNotEquals(Assert.java:1578)
+at org.testng.Assert.assertEqualsImpl(Assert.java:150)
+at org.testng.Assert.assertEquals(Assert.java:132)
+at org.testng.Assert.assertEquals(Assert.java:656)
+at org.testng.Assert.assertEquals(Assert.java:666)
+at com.hrm.admin.Admin_02_Pay_Grades.Employee_01_Add_New(Admin_02_Pay_Grades.java:87)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -360,209 +197,17 @@ at org.testng.TestNG.run(TestNG.java:1082)
 at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
 at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]"}
-  (Session info: MicrosoftEdge=126.0.2592.68)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.0', revision: 'b6bf9de7cc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b050f0bf6ab7143c589438dab60715ff
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 31 more
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- Employee_03_Contact_Details -->
-        <test-method signature="Employee_04_Emergency_Contact()[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:15:39 ICT" name="Employee_04_Emergency_Contact" finished-at="2024-06-25T16:17:16 ICT" duration-ms="97054" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
-at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
-at com.hrm.pim.PIM_01_Employee.Employee_04_Emergency_Contact(PIM_01_Employee.java:138)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]"}
-  (Session info: MicrosoftEdge=126.0.2592.68)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.0', revision: 'b6bf9de7cc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b050f0bf6ab7143c589438dab60715ff
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Employee_04_Emergency_Contact -->
-        <test-method signature="Employee_05_Job()[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:17:16 ICT" name="Employee_05_Job" finished-at="2024-06-25T16:17:34 ICT" duration-ms="18623" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Employee_05_Job -->
-        <test-method signature="Employee_06_Salary()[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:17:34 ICT" name="Employee_06_Salary" finished-at="2024-06-25T16:19:33 ICT" duration-ms="118576" status="FAIL">
-          <exception class="org.openqa.selenium.TimeoutException">
-            <message>
-              <![CDATA[Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for visibility of Proxy element for: DefaultElementLocator 'By.xpath: //div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]' (tried for 50 second(s) with 500 milliseconds interval)
-at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:84)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:228)
-at commons.BasePageFactory.waitForElementVisible(BasePageFactory.java:366)
-at commons.BaseActions.isSuccessMessageVisibled(BaseActions.java:43)
-at com.hrm.pim.PIM_01_Employee.Employee_06_Salary(PIM_01_Employee.java:179)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:566)
-at org.testng.internal.invokers.MethodInvocationHelper.invokeMethod(MethodInvocationHelper.java:139)
-at org.testng.internal.invokers.TestInvoker.invokeMethod(TestInvoker.java:664)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethod(TestInvoker.java:227)
-at org.testng.internal.invokers.MethodRunner.runInSequence(MethodRunner.java:50)
-at org.testng.internal.invokers.TestInvoker$MethodInvocationAgent.invoke(TestInvoker.java:957)
-at org.testng.internal.invokers.TestInvoker.invokeTestMethods(TestInvoker.java:200)
-at org.testng.internal.invokers.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:148)
-at org.testng.internal.invokers.TestMethodWorker.run(TestMethodWorker.java:128)
-at java.base/java.util.ArrayList.forEach(ArrayList.java:1541)
-at org.testng.TestRunner.privateRun(TestRunner.java:848)
-at org.testng.TestRunner.run(TestRunner.java:621)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:443)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:437)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:397)
-at org.testng.SuiteRunner.run(SuiteRunner.java:336)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:95)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1280)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1200)
-at org.testng.TestNG.runSuites(TestNG.java:1114)
-at org.testng.TestNG.run(TestNG.java:1082)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:115)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-Caused by: org.openqa.selenium.NoSuchElementException: no such element: Unable to locate element: {"method":"xpath","selector":"//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]"}
-  (Session info: MicrosoftEdge=126.0.2592.68)
-For documentation on this error, please visit: https://www.selenium.dev/documentation/webdriver/troubleshooting/errors#no-such-element-exception
-Build info: version: '4.18.0', revision: 'b6bf9de7cc'
-System info: os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '11.0.20'
-Driver info: org.openqa.selenium.edge.EdgeDriver
-Command: [b050f0bf6ab7143c589438dab60715ff, findElement {using=xpath, value=//div[@id='oxd-toaster_1']/div/div[1]/div[2]//p[contains(@class,'oxd-text--toast-message')]}]
-Capabilities {acceptInsecureCerts: false, browserName: MicrosoftEdge, browserVersion: 126.0.2592.68, fedcm:accounts: true, ms:edgeOptions: {debuggerAddress: localhost:62834}, msedge: {msedgedriverVersion: 126.0.2592.68 (30e1b6cc72a8..., userDataDir: C:\Users\nvvo9\AppData\Loca...}, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: windows, proxy: Proxy(), se:cdp: ws://localhost:62834/devtoo..., se:cdpVersion: 126.0.2592.68, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
-Session ID: b050f0bf6ab7143c589438dab60715ff
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:62)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:490)
-at org.openqa.selenium.remote.ErrorCodec.decode(ErrorCodec.java:167)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:138)
-at org.openqa.selenium.remote.codec.w3c.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:50)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:190)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.invokeExecute(DriverCommandExecutor.java:216)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:174)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:519)
-at org.openqa.selenium.remote.ElementLocation$ElementFinder$2.findElement(ElementLocation.java:165)
-at org.openqa.selenium.remote.ElementLocation.findElement(ElementLocation.java:59)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:356)
-at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:350)
-at org.openqa.selenium.support.pagefactory.DefaultElementLocator.findElement(DefaultElementLocator.java:68)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:38)
-at com.sun.proxy.$Proxy13.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:304)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:290)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:287)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:203)
-... 31 more
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.TimeoutException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- Employee_06_Salary -->
-        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.hrm.pim.PIM_01_Employee@6f43c82]" started-at="2024-06-25T16:19:33 ICT" name="afterClass" finished-at="2024-06-25T16:19:34 ICT" duration-ms="1488" status="PASS">
+        </test-method> <!-- Employee_01_Add_New -->
+        <test-method is-config="true" signature="afterClass()[pri:0, instance:com.hrm.admin.Admin_02_Pay_Grades@1b1cfb87]" started-at="2024-06-30T19:43:38 ICT" name="afterClass" finished-at="2024-06-30T19:43:39 ICT" duration-ms="1410" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterClass -->
-      </class> <!-- com.hrm.pim.PIM_01_Employee -->
+      </class> <!-- com.hrm.admin.Admin_02_Pay_Grades -->
     </test> <!-- Run on Edge -->
   </suite> <!-- OrangeHRM -->
 </testng-results>

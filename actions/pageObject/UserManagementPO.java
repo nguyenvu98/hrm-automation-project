@@ -40,4 +40,9 @@ public class UserManagementPO extends BaseActions{
 
 	}
 
+	public void clickToEmploymentStatus() {
+		waitForElementClickable(driver, jobDropdown);
+		selectInDropdownCustom(driver, jobDropdown, childJobDropdown,"Employment Status");		
+	}
+
 }

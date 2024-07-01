@@ -4,29 +4,25 @@
   <test thread-count="3" name="Run on Chrome(failed)">
     <parameter name="browser" value="chrome"/>
     <classes>
-      <class name="com.hrm.pim.PIM_01_Employee">
+      <class name="com.hrm.admin.Admin_02_Pay_Grades">
         <methods>
+          <include name="beforeClass"/>
           <include name="afterClass"/>
           <include name="Employee_01_Add_New" invocation-numbers="0"/>
-          <include name="Employee_06_Salary"/>
-          <include name="beforeClass"/>
         </methods>
-      </class> <!-- com.hrm.pim.PIM_01_Employee -->
+      </class> <!-- com.hrm.admin.Admin_02_Pay_Grades -->
     </classes>
   </test> <!-- Run on Chrome(failed) -->
   <test thread-count="3" name="Run on Edge(failed)">
     <parameter name="browser" value="edge"/>
     <classes>
-      <class name="com.hrm.pim.PIM_01_Employee">
+      <class name="com.hrm.admin.Admin_02_Pay_Grades">
         <methods>
-          <include name="afterClass"/>
-          <include name="Employee_04_Emergency_Contact"/>
-          <include name="Employee_03_Contact_Details"/>
-          <include name="Employee_01_Add_New" invocation-numbers="0"/>
-          <include name="Employee_06_Salary"/>
           <include name="beforeClass"/>
+          <include name="afterClass"/>
+          <include name="Employee_01_Add_New" invocation-numbers="0"/>
         </methods>
-      </class> <!-- com.hrm.pim.PIM_01_Employee -->
+      </class> <!-- com.hrm.admin.Admin_02_Pay_Grades -->
     </classes>
   </test> <!-- Run on Edge(failed) -->
 </suite> <!-- Failed suite [OrangeHRM] -->

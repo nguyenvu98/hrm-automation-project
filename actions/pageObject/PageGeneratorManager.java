@@ -59,4 +59,13 @@ public class PageGeneratorManager {
 	public static AddPayGradePO getAddPayGradePO(WebDriver driver) {
 		return new AddPayGradePO(driver);
 	}
+	
+	public static EmploymentStatusPO getEmploymentStatusPO(WebDriver driver) {
+		return new EmploymentStatusPO(driver);
+	}
+	
+	
+	public static AddEmploymentStatusPO getAddEmploymentStatusPO(WebDriver driver) {
+		return new AddEmploymentStatusPO(driver);
+	}
 }
