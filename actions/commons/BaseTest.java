@@ -95,8 +95,8 @@ public class BaseTest {
 		return random.nextInt(9999);
 	}
 
-	public Object getDriver() {
-		return null;
+	public WebDriver getDriverInstance() {
+        return driverBaseTest;
 	}
 
 	public void sleepInSecond(long time) {

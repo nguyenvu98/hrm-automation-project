@@ -23,7 +23,6 @@ import pageObject.PersonalDetailPO;
 import pageObject.SalaryPO;
 import pageUIs.AddEmployeeUI;
 import pageUIs.BasePageUI;
-import reportConfig.ExtentManager;
 
 public class PIM_01_Employee extends BaseTest{
 	
