@@ -17,3 +17,8 @@ The framework uses:
 
 2. Reporting
 In this project I use Extent Report version 2
+![report 3](https://github.com/user-attachments/assets/5d2dfb88-829f-46d7-ad55-02d478f716b3)
+![report 1](https://github.com/user-attachments/assets/115a5190-7323-48ba-8deb-81cb11919313)
+![report 2](https://github.com/user-attachments/assets/0b15756c-b478-4e46-8f6a-6a1eba5af2bf)
+
+
